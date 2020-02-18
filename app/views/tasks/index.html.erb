@@ -1,0 +1,6 @@
+<h1>My Tasks for today</h1>
+  <% @tasks.each do |task| %>
+  <p>[<%= task.completed ? "x" : " " %>] <%= link_to task.title, task_path(task)%></p>
+  <% end %>
+  <%= link_to 'create new', new_task_path  %>
+
